@@ -2,16 +2,12 @@
 
 echo "🚀 Starting setup for Customer Management App..."
 
-# -----------------------------
 # 1. Clone repository
-# -----------------------------
 echo "📥 Cloning repository..."
 git clone <repository-url>
 cd customer-management-app || exit
 
-# -----------------------------
 # 2. Backend setup
-# -----------------------------
 echo "⚙️  Installing backend dependencies..."
 npm install
 
@@ -37,16 +33,12 @@ CREATE TABLE IF NOT EXISTS addresses (
 EOF
 fi
 
-# -----------------------------
 # 3. Frontend setup
-# -----------------------------
 echo "📦 Installing frontend dependencies..."
 cd client || exit
 npm install
 
-# -----------------------------
 # 4. Run locally
-# -----------------------------
 echo "🖥️  Starting frontend and backend locally..."
 # Open two terminals: backend and frontend
 # Backend (from root folder)
@@ -58,12 +50,11 @@ echo "✅ Local setup complete."
 echo "Frontend: http://localhost:3000"
 echo "Backend API: http://localhost:3000/api"
 
-# -----------------------------
 # 5. Vercel Deployment
-# -----------------------------
 echo "🌐 Deploying to Vercel..."
 npm install -g vercel
 vercel login
 vercel --prod
 
 echo "🎉 Deployment complete! Check your Vercel dashboard for live URL."
+
